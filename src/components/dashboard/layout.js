@@ -81,6 +81,7 @@ function Layout(props) {
       setUsername(globalUserName);
     }
     if (getRoles()) {
+      console.log('getRoles()', getRoles())
       globalRole = getRoles();
     }
 
@@ -181,7 +182,22 @@ function Layout(props) {
             route: "non_verified_family_data",
           },
           { text: "View CSC Report",
-           route: "csc-survey-report" 
+           route: "csc-survey-report"
+          },
+        ];
+      case "Super Admin":
+        return [
+          { text: "Dashboard", route: "dashboard" },
+          { text: "Survey Summary", route: "survey_summary" },
+          { text: "View/Edit Data", route: "view_edit_data" },
+          { text: "Verified Family Data", route: "verified_family_data" },
+          {
+            text: "Not Verified Family Data",
+            route: "non_verified_family_data",
+          },
+          {
+            text: "View CSC Report",
+            route: "csc-survey-report"
           },
         ];
       case "Surveyor":
@@ -189,7 +205,7 @@ function Layout(props) {
           { text: "Dashboard", route: "dashboard" },
           { text: "Survey Summary", route: "survey_summary" },
           { text: "View Data", route: "view_edit_data" }
-         
+
         ];
       case "Verifying Authority":
         return [
@@ -224,9 +240,9 @@ function Layout(props) {
               route: "non_verified_family_data",
             },
             { text: "View CSC Report",
-            route: "csc-survey-report" 
+            route: "csc-survey-report"
            },
-           
+
           ];
       default:
         return [];
