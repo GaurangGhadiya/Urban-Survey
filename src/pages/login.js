@@ -45,11 +45,11 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 
 function Copyright(props) {
   return (
-    <Typography variant="body2" color="primary" align="center" {...props}>
+    <Typography variant="body2" color="primary" align="center" {...props} style={{ cursor: "pointer" }} onClick={() => window.open("https://ddtg.hp.gov.in/", "_blank")}>
       {"©"}
-      <Link color="inherit" href="www.google.com">
-        2024 Department of Digital Technologies and Governance
-      </Link>
+      {/* <Link color="inherit" href="https://ddtg.hp.gov.in/"> */}
+      2025 Department of Digital Technologies and Governance
+      {/* </Link> */}
       {""}
       {/* {new Date().getFullYear()} */}
       {"."}
@@ -86,7 +86,7 @@ function SignIn(props) {
   const handleClick = () => {
     setShowAlert(true);
   };
-  
+
   const handleClose1 = () => {
     setOpenParichay(false)
   }
